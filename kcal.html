@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="g" placeholder="Add meg a mennyiséget grammban">
+        <br>
+        <input type="button" value="Számol" onclick="szamol()">
+    </form>
+
+    <div class="msg">
+
+    </div>
+    <script>
+        function szamol(){
+            let g =+    document.getElementById('g').value;
+            if(!g){
+                document.querySelector('.msg').innerHTML='Nem számot írtál be!'
+                return;
+            }else{
+                let kcal= g*46/100
+                let kcal2 = g*50/100
+                document.querySelector('.msg').innerHTML=kcal+ '-'+kcal2+ ' kcal'
+            }
+        }
+    </script>
+</body>
+</html>

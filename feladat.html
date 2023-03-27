@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELADAT 14</title>
+</head>
+<body>
+    <h1>14. feladat</h1>
+    <div class="container">
+        <h2> Eredeti:</h2>
+        <textarea id="e" cols="35" rows="5" style="resize:none"></textarea>
+        <br>
+        <input type="button" value="Másol" onclick="copy()">
+        <br>
+        <h2> Másolt:</h2>
+        <textarea id="m" cols="35" rows="5" style="resize:none"></textarea>
+        <br>
+        <input type="button" value="Töröl" onclick="del()">
+        <br>
+        <p class="msg"></p>
+    </div>
+
+    <script>
+        function copy(){
+            let c = document.getElementById("e").value;
+            console.log(c);
+            document.getElementById("m").innerHTML=c;
+        }
+
+        function del(){
+            let d = document.getElementById("m").value;
+            if(d !=""){
+                document.getElementById("m").innerHTML="";
+                document.querySelector(".msg").innerHTML="";
+            }else{
+                document.querySelector(".msg").innerHTML="Eddig is üres volt ;)";
+            }
+        }
+
+    </script>
+    
+   
+</body>
+</html>
